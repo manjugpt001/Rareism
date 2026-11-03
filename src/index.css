@@ -231,17 +231,17 @@ body {
 }
 
 #modal form button:last-of-type {
-  background: var(--dark);
+  background: var(--white);
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  color: var(--white);
+  color: var(--dark);
   font-size: 1rem;
   cursor: pointer;
 }
 
 #modal form button:last-of-type:hover {
-  background: var(--dark);
+  background: var(--white);
 }
 
 #checkout {

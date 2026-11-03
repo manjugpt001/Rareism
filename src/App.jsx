@@ -18,12 +18,10 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={theme}>
       <ShoppingCartContextProvider>
         <Header />
         <Shop />
       </ShoppingCartContextProvider>
-    </div>
   );
 }
 
