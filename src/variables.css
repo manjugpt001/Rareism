@@ -1,0 +1,11 @@
+:root {
+  --dark: #000;
+  --white: #fff;
+  --button-hover: #6d6b66;
+}
+
+body.dark-theme {
+  --dark: #fff;
+  --white: #000;
+  --button-hover: #eee8db;
+}

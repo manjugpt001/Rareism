@@ -3,10 +3,12 @@ import { useRef, useContext } from 'react';
 import CartModal from './CartModal.jsx';
 
 import { ShoppingCartContext } from '../store/shopping-cart-context.jsx';
+import { ThemeContext } from '../store/ThemeContextProvider.jsx'; 
 
 export default function Header() {
   const { items } = useContext(ShoppingCartContext);
   const modal = useRef();
+  const { toggleTheme } = useContext(ThemeContext);
 
   const cartQuantity = items.reduce(
     (total, item) => total + item.quantity,
@@ -37,12 +39,17 @@ export default function Header() {
       />
       <header id="main-header">
         <div id="main-title">
-          <img src="logo.png" alt="Rareism Spark" />
-          <h1>Rareism Spark</h1>
+          <img src="logo.png" alt="Demo Website" />
+          <h2>Demo Website</h2>
         </div>
-        <p>
-          <button onClick={handleOpenCartClick}>Cart ({cartQuantity})</button>
-        </p>
+        <div class="buttons">
+           <button onClick={toggleTheme}>
+            Toggle Theme
+          </button>
+          <button onClick={handleOpenCartClick}>
+            Cart ({cartQuantity})
+          </button>
+        </div>
       </header>
     </>
   );
